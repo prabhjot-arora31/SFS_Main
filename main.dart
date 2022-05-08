@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +16,10 @@ String ab2 =
     "Sylvan surroundings,tranquil atmosphere far away from the hustle and bustle of city life make the ambience of the insitution conductive for learning. Surrounded by seminaries given to philosophical teachings, the very atmosphere of the insititution spells quietude and encourages a reflective frame of mind. The well-equipped automated digitized library, an Audio Visual Conference Room, a state-of-art Seminary hall with modern facilties, labs for research and spacious class rooms facilitate the teachings and learning process. The college has been assessed and re-accredited 'A' grade with CGPA of 3.23 by the National Assessment and Accredition Council (NAAC),Banglore. ";
 String ab3 =
     "SFS Students are known for their discipline and an ability to think for themselves, which makes them versatile and resilient to face the challenges in an increasingly competitive world. S.F.S is a tiny world where the students live in symbiotic relation amidst love, duty and values progressing academically towards building a better India. ";
+String vision =
+    "S.F.S College stands for excellence in academic and integrity of character. It aims to develop a scientific temperament for a coding, impartial and inclusive society.";
+String mission =
+    "S.F.S aims to create and facilitate an environment for knowledge,research,skill,self-reliance and humanitarianism that propels the young to build a caring and sharing society.";
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -115,6 +121,154 @@ class MyApp extends StatelessWidget {
                 height: 20,
               ),
               Padding(
+                padding: EdgeInsets.all(13.56),
+                child: ListTile(
+                  tileColor: Colors.red[200],
+                  title: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(children: [
+                      Text(
+                        "Vision",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20.0),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Divider(
+                        indent: 80,
+                        endIndent: 80,
+                        thickness: 4.538,
+                        color: Colors.blue,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        vision,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 40.0,
+                      ),
+                      Text(
+                        "Mission",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20.0),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Divider(
+                        indent: 80,
+                        endIndent: 80,
+                        thickness: 4.538,
+                        color: Colors.blue,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        mission,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ]),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            ListTile(
+                              tileColor: Colors.red.shade500,
+                              title: Text(
+                                "President's Desk",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25.0,
+                                  // backgroundColor: Colors.red.shade300),
+                                ),
+                              ),
+                            ),
+                            Image.asset("Images/pricipaldesk.jpg"),
+                            ListTile(
+                                tileColor: Colors.red.shade300,
+                                title: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Archbishop Elias Gonsalves',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 22),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        'President of SFS College Society',
+                                        style: TextStyle(fontSize: 18),
+                                      ),
+                                      SizedBox(
+                                        height: 30,
+                                      ),
+                                      Divider(
+                                        thickness: 6,
+                                        indent: 70,
+                                        endIndent: 70,
+                                        color: Colors.blue,
+                                      ),
+                                      SizedBox(
+                                        height: 30,
+                                      ),
+                                      ListTile(
+                                        tileColor: Colors.grey,
+                                        title: Text(
+                                          "Annual Magazine",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 25.0,
+                                            // backgroundColor: Colors.red.shade300),
+                                          ),
+                                        ),
+                                      ),
+                                      Image.asset("Images/annualmagazine.jpg"),
+                                      ListTile(
+                                        tileColor: Colors.red.shade300,
+                                      ),
+                                      ListTile(
+                                        tileColor: Colors.red.shade300,
+                                      )
+                                    ]))
+                          ],
+                        ),
+                      ])),
+              SizedBox(
+                height: 20,
+              ),
+              Column(
+                children: [
+                  // CrossAxisAlignment.center,
+                  Text(
+                    "About SFS College",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Text(
                   clg_info,
@@ -150,11 +304,9 @@ class MyApp extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center,
                   // crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Expanded(
-                      flex: 10,
-                      child: Image.asset("Images/sfs2.png"),
-                      // image: AssetImage("Images/sfs2.png"),
-                    ),
+                    // flex: 10,
+                    Expanded(child: Image.asset("Images/gate_sfs.jpg")),
+                    // image: AssetImage("Images/sfs2.png"),
                   ]),
               Padding(
                   padding: EdgeInsets.all(20.0),
